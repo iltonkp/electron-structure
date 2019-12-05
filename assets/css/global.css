@@ -1,0 +1,20 @@
+/* Global -------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  background-color: #eee;
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
