@@ -20,7 +20,7 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin: 30px 20px;
 }
@@ -55,4 +55,9 @@ h1 {
   justify-content: flex-start;
   align-self: center;
   align-items: center;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
 }

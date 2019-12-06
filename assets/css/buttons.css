@@ -9,6 +9,7 @@
   font-size: 16px;
   font-weight: bold;
   color: #fff;
+  margin-right: 30%;
 }
 
 .btn-main {
@@ -19,9 +20,18 @@
   width: 300px;
   height: 120px;
   outline: none;
+
+  margin-bottom: 15px;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-label {
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 15px;
-  margin-left: 25px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
