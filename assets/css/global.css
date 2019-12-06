@@ -9,12 +9,48 @@
 body {
   height: 100%;
   display: flex;
-  background-color: #eee;
+  background-image: url(../img/background.jpg);
+}
+
+.container {
+  flex: 1;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 20px;
 }
 
 .content {
   flex: 1;
   overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden;
+  opacity: 0;*/
+}
+
+.container-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.container-buttons {
+  display: flex;
+
+  margin-top: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: stretch;
 }

@@ -1,0 +1,25 @@
+.btn-back {
+  border-radius: 50%;
+  background: #ffa200;
+  background: linear-gradient(#ffa200, #cc6600),
+    linear-gradient(#ffa200 0%, #ffa200 49%, #cc6600 60%, #cc6600);
+  width: 100px;
+  height: 100px;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn-main {
+  border-radius: 20px;
+  background: #6b778d;
+  background: linear-gradient(#6b778d, #dadada),
+    linear-gradient(#6b778d 0%, #6b778d 49%, #dadada 60%, #dadada);
+  width: 300px;
+  height: 120px;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}

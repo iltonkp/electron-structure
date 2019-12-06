@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
+require("electron-reload")(__dirname);
+
 let mainWindow = null;
 
 function initialize() {
