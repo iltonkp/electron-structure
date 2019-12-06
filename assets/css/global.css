@@ -28,15 +28,13 @@ header {
 .content {
   flex: 1;
   overflow: hidden;
-  /* visibility: hidden;
-  opacity: 0;*/
 }
 
 .container-section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 5%;
+  height: 90%;
 }
 
 h1 {
@@ -64,7 +62,6 @@ footer {
   flex: 1;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: 7%;
   padding-right: 15px;
 }
 

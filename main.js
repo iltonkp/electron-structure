@@ -1,10 +1,11 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
+require("electron-reload")(__dirname);
+
 let mainWindow = null;
 
 function initialize() {
-
   makeSingleInstance();
 
   function createWindow() {
@@ -42,15 +43,15 @@ function initialize() {
   });
 }
 
-function makeSingleInstance () {
-  app.requestSingleInstanceLock()
+function makeSingleInstance() {
+  app.requestSingleInstanceLock();
 
-  app.on('second-instance', () => {
+  app.on("second-instance", () => {
     if (mainWindow) {
-      if (mainWindow.isMinimized()) mainWindow.restore()
-      mainWindow.focus()
+      if (mainWindow.isMinimized()) mainWindow.restore();
+      mainWindow.focus();
     }
-  })
+  });
 }
 
 initialize();
