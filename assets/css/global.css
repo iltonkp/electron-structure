@@ -48,9 +48,11 @@ h1 {
 
 .container-buttons {
   display: flex;
-
+  width: 80%;
+  flex-wrap: wrap;
   margin-top: 50px;
   flex-direction: row;
-  justify-content: space-around;
-  align-self: stretch;
+  justify-content: flex-start;
+  align-self: center;
+  align-items: center;
 }
