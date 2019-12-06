@@ -86,9 +86,9 @@ footer div img {
 }
 
 .section.is-show {
-  visibility: visible;
+  display: block;
 }
 
 .section {
-  visibility: hidden;
+  display: none;
 }
