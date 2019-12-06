@@ -84,3 +84,11 @@ footer div img {
   width: 60px;
   height: 60px;
 }
+
+.section.is-show {
+  visibility: visible;
+}
+
+.section {
+  visibility: hidden;
+}
