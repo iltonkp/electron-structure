@@ -1,28 +1,42 @@
 <template class="task-template">
   <section id="age-confirmation-section" class="section">
     <div class="container-section">
+      <div class="circle-container">
+        <span class="question"
+          >VOCÊ TEM MAIS DE <br />
+          18 ANOS?</span
+        >
 
-      <div class="circle-container"> 
-        <span class="question">VOCÊ TEM MAIS DE <br/> 18 ANOS?</span>
-        
-        <div class="circle-container-buttons"> 
-          <button class="btn-mim-green" type="button">
-            <span class="btn-label">SIM</span>
+        <div class="circle-container-buttons">
+          <button
+            class="btn-mim-green btn-navigation"
+            data-section="game-home"
+            type="button"
+          >
+            SIM
           </button>
 
-           <button class="btn-mim-red btn-navigation" data-section="home" type="button">
-            <span class="btn-label">NÃO</span>
+          <button
+            class="btn-mim-red btn-navigation"
+            data-section="home"
+            type="button"
+          >
+            NÃO
           </button>
         </div>
 
-        <span class="notification">Proibida a venda de bilhetes lotéricos para <br/> 
-        menores de idade, conforme Lei n.<br/> 8069/90, art.81, inciso VI 
-        do Estatuto da <br/> Criança e do Adolescente</span>
+        <span class="notification"
+          >Proibida a venda de bilhetes lotéricos para <br />
+          menores de idade, conforme Lei n.<br />
+          8069/90, art.81, inciso VI do Estatuto da <br />
+          Criança e do Adolescente</span
+        >
       </div>
 
-      <span class="information">CRIME DE FALSIDADE IDEOLÓGICA É FIGURA TIPIFICADA <br/> 
-      NO ARTIGO 299 DO CÓDIGO PENAL BRASILEIRO</span>  
-     
+      <span class="information"
+        >CRIME DE FALSIDADE IDEOLÓGICA É FIGURA TIPIFICADA <br />
+        NO ARTIGO 299 DO CÓDIGO PENAL BRASILEIRO</span
+      >
     </div>
   </section>
 </template>

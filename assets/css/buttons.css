@@ -19,6 +19,7 @@
     linear-gradient(#6b778d 0%, #6b778d 49%, #dadada 60%, #dadada);
   width: 300px;
   height: 120px;
+  padding: 10px;
   outline: none;
 
   margin-bottom: 15px;
@@ -43,6 +44,11 @@
   height: 70px;
   outline: none;
   margin: 10px;
+
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .btn-mim-green {
@@ -54,4 +60,9 @@
   height: 70px;
   outline: none;
   margin: 10px;
+
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
