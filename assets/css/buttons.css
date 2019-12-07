@@ -27,6 +27,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .btn-mim-red {
@@ -49,11 +54,4 @@
   height: 70px;
   outline: none;
   margin: 10px;
-}
-
-.btn-label {
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
