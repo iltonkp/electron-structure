@@ -11,9 +11,13 @@ body {
 }
 
 .container {
-  display: flex;
+  display: none;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.container-show {
+  display: flex;
 }
 
 header {
