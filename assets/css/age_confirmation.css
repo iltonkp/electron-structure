@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 450px;
-  height: 450px;
-  border-radius: 225px;
+  width: 60vh;
+  height: 60vh;
+  border-radius: 30vh;
   background: #6b778d;
   background: linear-gradient(#6b778d, #dadada);
   background: linear-gradient(#6b778d 0%, #6b778d 49%, #dadada 60%, #dadada);
@@ -13,7 +13,7 @@
 
 .notification {
   color: #000;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
 }
@@ -21,7 +21,7 @@
 .information {
   margin-top: 3%;
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
