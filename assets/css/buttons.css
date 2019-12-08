@@ -19,11 +19,11 @@
     linear-gradient(#6b778d 0%, #6b778d 49%, #dadada 60%, #dadada);
   width: 300px;
   height: 120px;
-  padding: 10px;
+  padding: 20px;
   outline: none;
 
-  margin-bottom: 15px;
-  margin-left: 25px;
+  margin-bottom: 65px;
+  margin-left: 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,6 +33,35 @@
   font-weight: bold;
   color: #fff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.btn-game {
+  width: 180px;
+  height: 183px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  outline: none;
+}
+
+#mega-sena {
+  background: url(../img/megasena.png) no-repeat;
+}
+
+#loto-mania {
+  background: url(../img/lotomania.png) no-repeat;
+}
+
+#dupla-sena {
+  background: url(../img/duplasena.png) no-repeat;
+}
+
+#time-mania {
+  background: url(../img/timemania.png) no-repeat;
 }
 
 .btn-mim-red {
