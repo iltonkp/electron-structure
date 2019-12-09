@@ -35,6 +35,25 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.btn-number {
+  border-radius: 8px;
+
+  outline: none;
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+  font-size: 23px;
+  font-weight: bold;
+}
+
 .btn-game {
   width: 180px;
   height: 183px;
