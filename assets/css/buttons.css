@@ -53,6 +53,10 @@
   font-size: 23px;
   font-weight: bold;
 }
+.active {
+  background-color: rgb(243, 162, 10);
+  color: white;
+}
 
 .btn-game {
   width: 180px;

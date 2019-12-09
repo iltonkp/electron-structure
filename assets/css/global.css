@@ -12,7 +12,7 @@ body {
 
 .container {
   display: none;
-  min-height: 70vh;
+  min-height: 90vh;
   flex-direction: column;
 }
 
@@ -80,6 +80,16 @@ h1 {
   margin-top: 5vh;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 90%;
+}
+
+.container-buttons-confirmation {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-top: 5vh;
+  justify-content: center;
+  align-items: center;
   width: 90%;
 }
 
