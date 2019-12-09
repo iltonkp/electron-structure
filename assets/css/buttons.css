@@ -62,7 +62,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: 100px;
   outline: none;
 }
@@ -99,12 +99,44 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.btn-red {
+  border-radius: 6px;
+  background: #f70404;
+  background: linear-gradient(#f70404, #f35656),
+    linear-gradient(#f70404 0%, #f70404 49%, #f35656 60%, #f35656);
+  width: 200px;
+  height: 70px;
+  outline: none;
+  margin: 10px;
+
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .btn-mim-green {
   border-radius: 6px;
   background: #02bd02;
   background: linear-gradient(#02bd02, #67ee85),
     linear-gradient(#02bd02 0%, #02bd02 49%, #67ee85 60%, #67ee85);
   width: 100px;
+  height: 70px;
+  outline: none;
+  margin: 10px;
+
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.btn-green {
+  border-radius: 6px;
+  background: #02bd02;
+  background: linear-gradient(#02bd02, #67ee85),
+    linear-gradient(#02bd02 0%, #02bd02 49%, #67ee85 60%, #67ee85);
+  width: 200px;
   height: 70px;
   outline: none;
   margin: 10px;

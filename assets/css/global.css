@@ -12,7 +12,7 @@ body {
 
 .container {
   display: none;
-  min-height: 100vh;
+  min-height: 70vh;
   flex-direction: column;
 }
 
@@ -80,7 +80,7 @@ h1 {
   margin-top: 5vh;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 70%;
+  width: 90%;
 }
 
 .icon {
