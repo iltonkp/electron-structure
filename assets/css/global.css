@@ -93,6 +93,78 @@ h1 {
   width: 90%;
 }
 
+.container-table {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-top: 5vh;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+table {
+  margin-top: 15px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100vh;
+  padding: 10px;
+
+  background: #ddd;
+  border-radius: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid rgb(175, 174, 174);
+}
+
+.label-games {
+  font-weight: normal;
+  color: #000;
+  font-size: 25px;
+}
+
+.number-games {
+  color: rgb(243, 161, 9);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.label-amount {
+  color: rgb(3, 243, 55);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.table-header {
+  font-weight: bold;
+  color: #000;
+  font-size: 25px;
+}
+
+.table-total {
+  font-weight: bold;
+  color: #000;
+  font-size: 25px;
+}
+
+.table-total-amount {
+  font-weight: bold;
+  color: rgb(3, 243, 55);
+  font-size: 25px;
+}
+
+.table-right {
+  text-align: right;
+}
+
 .icon {
   width: 60px;
   height: 60px;
