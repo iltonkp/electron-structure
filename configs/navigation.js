@@ -3,7 +3,7 @@ const GameService = require("../services/games-services");
 document.body.addEventListener("click", event => {
   if (event.target.dataset.section) {
     loadNewSection(event);
-    if(event.target.dataset.section == "new-game") {
+    if (event.target.dataset.section == "new-game") {
       loadGame();
     }
   }
@@ -38,10 +38,12 @@ async function loadGame() {
   let gameService = new GameService();
   let games = await gameService.getAllGames();
 
-  let newGamePage = document.body.getElementsByClassName("container-buttons-new-games");
+  let newGamePage = document.body.getElementsByClassName(
+    "container-buttons-new-games"
+  );
   let html = "";
   games.data.forEach(element => {
-    html += `<button class="btn-game" id="${element.name.toLowerCase()}" type="button" data-section="${element.name.toLowerCase()}"></button>`
+    html += `<button class="btn-game" id="${element.name.toLowerCase()}" type="button" data-section="${element.name.toLowerCase()}"></button>`;
   });
 
   newGamePage[0].innerHTML = html;

@@ -85,6 +85,17 @@ h1 {
   width: 90%;
 }
 
+.container-buttons-new-games {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+}
+
 .container-buttons-confirmation {
   display: flex;
   flex: 1;
