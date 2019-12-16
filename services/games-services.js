@@ -14,4 +14,5 @@ module.exports = class GameService {
 
         return this._games;
     }
+
 }
