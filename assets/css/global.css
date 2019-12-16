@@ -13,7 +13,7 @@ body {
 .container {
   display: none;
   min-height: 90vh;
-  min-width: 90vh;
+
   flex-direction: column;
 }
 
