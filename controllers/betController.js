@@ -9,14 +9,21 @@ class BetController extends AbstractController {
 
     _loadEvents() {
         this._ageConfimation();
+        this._newGame();
     }
 
     _ageConfimation() {
         this._addEvents(".age-confirmation", "click", event => {
             if(event.target) {
-                this._hideCurrentSection();
                 this._loadPage(event.target.dataset.section);
             }
+        });
+    }
+
+    _newGame() {
+        this._addEvents("#new-game", "click", event => {
+            debugger;
+            this._loadPage(event.target.dataset.section);
         });
     }
 }

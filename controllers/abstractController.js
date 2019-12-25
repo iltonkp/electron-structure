@@ -7,6 +7,7 @@ module.exports = class AbstractController {
     }
 
     _loadPage(page) { 
+        this._hideCurrentSection();
         let sectionId = "";
         if(page) {
             sectionId = `${page}-section`;
