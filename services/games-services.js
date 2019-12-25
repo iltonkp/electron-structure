@@ -44,7 +44,6 @@ module.exports = class GameService {
                     event.target.classList.add("active");
                 }
 
-                debugger;
                 this._modifyNumberList(existNumber, event.target.textContent);
 
             });
