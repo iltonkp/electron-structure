@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
-require("electron-reload")(__dirname);
+require("electron-reload");
 
 let mainWindow = null;
 
@@ -18,8 +18,9 @@ function initialize() {
 
     mainWindow = new BrowserWindow(windowOptions);
     mainWindow.loadURL(path.join("file://", __dirname, "/index.html"));
-    mainWindow.maximize();
-    mainWindow.setFullScreen(true);
+    //mainWindow.maximize();
+    mainWindow.setFullScreen(false);
+    mainWindow.webContents.openDevTools(true);
 
     mainWindow.on("closed", () => {
       mainWindow = null;

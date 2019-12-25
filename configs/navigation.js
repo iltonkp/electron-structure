@@ -3,14 +3,14 @@ var games = [];
 var selectedNumbers = [];
 var button;
 
-document.body.addEventListener("click", event => {
-  if (event.target.dataset.section) {
-    loadNewSection(event);
-    if (event.target.dataset.section == "new-game") {
-      loadGame();
-    }
-  }
-});
+// document.body.addEventListener("click", event => {
+//   if (event.target.dataset.section) {
+//     loadNewSection(event);
+//     if (event.target.dataset.section == "new-game") {
+//       loadGame();
+//     }
+//   }
+// });
 
 function loadNewSection(event) {
   hideCurrentSection();
