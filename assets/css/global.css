@@ -13,7 +13,7 @@ body {
 .container {
   display: none;
   min-height: 90vh;
-  min-width: 90vh;
+
   flex-direction: column;
 }
 
@@ -75,6 +75,17 @@ h1 {
 }
 
 .container-buttons {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+}
+
+.container-buttons-new-games {
   display: flex;
   flex: 1;
   flex-direction: row;
