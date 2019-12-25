@@ -1,8 +1,15 @@
 class BetController {
 
-    constructor() {
-        console.log("load Bet Controller");
+    constructor(event) {
+        debugger;
+        this._event = event;
+        this._loadPage();
+    }
+
+    _loadPage() {
+        let sectionId = `${this._event.target.dataset.section}-section`;
+        document.getElementById(sectionId).classList.add("is-show");
     }
 }
 
-module.exports = new BetController();
+module.exports = new BetController(event);
