@@ -18,8 +18,8 @@ function initialize() {
 
     mainWindow = new BrowserWindow(windowOptions);
     mainWindow.loadURL(path.join("file://", __dirname, "/index.html"));
-    //mainWindow.maximize();
-    mainWindow.setFullScreen(false);
+    mainWindow.maximize();
+    mainWindow.setFullScreen(true);
     mainWindow.webContents.openDevTools(true);
 
     mainWindow.on("closed", () => {
