@@ -3,11 +3,17 @@ module.exports = class AbstractController {
     constructor(event) {
         this._event = event;
         this._hideCurrentSection();
-        this._loadPage();
+        this._loadPage(null);
     }
 
-    _loadPage() { 
-        let sectionId = `${this._event.target.dataset.section}-section`;
+    _loadPage(page) { 
+        let sectionId = "";
+        if(page) {
+            sectionId = `${page}-section`;
+        } else {
+            sectionId = `${this._event.target.dataset.section}-section`;
+        }
+
         document.getElementById(sectionId).classList.add("is-show");
     }
 
@@ -15,6 +21,14 @@ module.exports = class AbstractController {
         let sections = document.querySelectorAll(".section");
         Array.prototype.forEach.call(sections, section => {
             section.classList.remove("is-show");
+        });
+    }
+
+    _addEvents(selector, eventName, func) {
+        document.querySelectorAll(selector).forEach(element => {
+            element.addEventListener(eventName, event => {
+                func(event);
+            });
         });
     }
 }
