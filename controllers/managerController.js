@@ -33,17 +33,9 @@ class ManagerController {
     }
 
     _loadController(event) {
-        this._hideCurrentSection();
         delete require.cache[this._controllers[event.target.getAttribute("controller")]];
         require(this._controllers[event.target.getAttribute("controller")]);
     }
-
-    _hideCurrentSection() {
-        const sections = document.querySelectorAll(".section");
-        Array.prototype.forEach.call(sections, section => {
-          section.classList.remove("is-show");
-        });
-      }
 }
 
 module.exports = new ManagerController();
