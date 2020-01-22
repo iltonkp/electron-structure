@@ -5,3 +5,5 @@ class PaymentController extends AbstractController {
     super(event);
   }
 }
+
+module.exports = new PaymentController(event);
