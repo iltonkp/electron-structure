@@ -1,8 +1,8 @@
 module.exports = class AbstractController {
   constructor(event) {
     this._event = event;
-    this._hideCurrentSection();
-    this._loadPage(null);
+    //this._hideCurrentSection();
+    //this._loadPage(null);
   }
 
   _loadPage(page) {

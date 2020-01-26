@@ -11,8 +11,9 @@ module.exports = class PaymentService {
       documentNumber: payNumber
     };
 
+    console.log(payNumber);
     const response = await axios.post("payment", this._paymentData);
-
     console.log(response);
+    return response;
   }
 };

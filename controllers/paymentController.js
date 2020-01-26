@@ -4,8 +4,8 @@ const PaymentService = require("../services/payment-service.js");
 class PaymentController extends AbstractController {
   constructor(event) {
     super(event);
-    this._loadEvents();
     this._paymentService = new PaymentService();
+    this._loadEvents();
   }
 
   _loadEvents() {
