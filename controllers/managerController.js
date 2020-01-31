@@ -34,7 +34,7 @@ class ManagerController {
 
     _loadController(event) {
         delete require.cache[this._controllers[event.target.getAttribute("controller")]];
-        require(this._controllers[event.target.getAttribute("controller")]);
+        require(this._controllers[event.currentTarget.attributes['controller'].value]);
     }
 }
 

@@ -16,10 +16,15 @@ module.exports = class AbstractController {
         }
 
         document.getElementById(sectionId).classList.add("is-show");
+        let bodyClass = document.querySelector(`#${sectionId} #bodyClass`);
+        if(bodyClass) {
+            document.getElementsByTagName("BODY")[0].className = "";
+            document.getElementsByTagName("BODY")[0].className = bodyClass.value;
+        }
     }
 
     _hideCurrentSection() {
-        let sections = document.querySelectorAll(".section");
+        let sections = document.querySelectorAll(".template");
         Array.prototype.forEach.call(sections, section => {
             section.classList.remove("is-show");
         });

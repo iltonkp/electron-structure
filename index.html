@@ -1,50 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#1843c1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
+    <title>Lotoexpresso</title>
+    <link rel="stylesheet" href="assets/css/style.css?cb=1578596592029">
 
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/games.css" />
-    <link rel="stylesheet" href="assets/css/buttons.css" />
-    <link rel="stylesheet" href="assets/css/age_confirmation.css" />
-    <link rel="stylesheet" href="assets/css/shopping_cart.css" />
 
-    <link rel="import" href="pages/home.html" />
-    <link rel="import" href="pages/game_home.html" />
+    <link rel="import" href="pages/navegacao.html" />
     <link rel="import" href="pages/age_confirmation.html" />
-    <link rel="import" href="pages/new_game.html" />
+    <link rel="import" href="pages/navegacao-jogos.html" />
     <link rel="import" href="pages/shopping_cart.html" />
-    <link rel="import" href="pages/confirmation_game_question.html" />
-    <!--import games page-->
-    <link rel="import" href="pages/games/mega_sena.html" />
+    <link rel="import" href="pages/confirmacao-idade.html" />
+    <link rel="import" href="pages/lista-de-jogos.html" />
+    <link rel="import" href="pages/jogo-generico.html" />
   </head>
-  <body>
-    <div class="container container-show">
-      <header>
-        <button
-          class="btn-back btn-navigation"
-          data-section="home"
-          type="button"
-        >
-          Voltar
-        </button>
-        <img src="./assets/img/logo.png" alt="Caixa Econônica Federal" />
-      </header>
+  <body class="primary-nav">
+      <main class="container content container-show">
+        <h1 class="logo">Caixa</h1>
 
-      <main class="content"></main>
-
-      <footer>
-        <p>ALMENTAR LETRA</p>
-        <div class="button-accecibility-container">
-          <button type="button">
-            <img src="./assets/icons/text_plus.svg" />
-          </button>
-          <button type="button">
-            <img src="./assets/icons/text_minus.svg" />
-          </button>
-        </div>
-      </footer>
-    </div>
+        <!-- acessibility -->
+        <nav class="acessibility">
+          <h3>Aumentar Letra</h3>
+          <ul>
+            <li>
+              <button type="button"> A<span>-</span></button>
+            </li>
+            <li>
+              <button type="button"> A<span>+</span></button>
+            </li>
+          </ul>
+        </nav>
+      </main>
   </body>
   <script>
     require("./configs/imports");

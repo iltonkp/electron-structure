@@ -16,19 +16,29 @@ module.exports = class GameService {
         return this._games;
     }
 
+    loadPageGame() {
+        let section = document.getElementById("games");
+        let html = "";
+        this._games.data.forEach(g => {
+            let className = g.name.toLowerCase().replace("-","");
+            html += `<li><button class="${className} btn-game" type="button" gameselected=${g.name} data-section="jogo-generico"><span>${g.name}</span></button></li>`
+        });
+        section.innerHTML = html;
+    }
+
     startGame(selectedGame) {
-        let section = document.getElementById(`${selectedGame}-new-game`);
+        let section = document.getElementById(`generic-game-numbers`);
         let game = null;
         
         this._games.data.forEach(g => {
-            if(g.name.toLowerCase() == selectedGame) {
+            if(g.name == selectedGame) {
                 game = g; 
             }
         });
 
         let html = "";
         for(let i = 1; i <= game.numbersAmount; i++) {
-            html += `<button type="button" class="btn-number">${i}</button>`
+            html += `<button type="button" class="btn-number btn-smallest">${i}</button>`
         }
 
         section.innerHTML = html;
