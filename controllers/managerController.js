@@ -5,10 +5,14 @@ const controllersFolder = `${pathRoot}/controllers`;
 class ManagerController {
 
     constructor() {
-        this._session = null;
+        this._session = {};
         //will be a hashmap
         this._controllers = {};
         this._load();
+    }
+
+    static getSession() {
+        return this._session;
     }
 
     _load() {

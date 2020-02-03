@@ -82,7 +82,8 @@ module.exports = class GameService {
             numbers: this._selectedNumbers
         });
 
-        console.log(this._checkout);
+        //if everything it's ok
+        return true;
     }
 
 }
