@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
+const axios = require('./configs/api');
 
 require("electron-reload");
 

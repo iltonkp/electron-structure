@@ -14,6 +14,8 @@ class BetController extends AbstractController {
         this._ageConfimation();
         this._newGame();
         this._openGame();
+        this._confirmGame();
+        this._cancelBet();
     }
 
     _ageConfimation() {
@@ -36,6 +38,18 @@ class BetController extends AbstractController {
         this._addEvents(".btn-game", "click", event => {
             this._loadPage(event.target.dataset.section);
             this._gameService.startGame(event.currentTarget.attributes['gameselected'].value);
+        });
+    }
+
+    _confirmGame() {
+        this._addEvents("#confirmGame", "click", event => {
+            this._gameService.confirmGame()
+        })
+    }
+
+    _cancelBet() {
+        this._addEvents("#cancelBet", "click", event => {
+            this._loadPage("game-home");
         });
     }
 }
