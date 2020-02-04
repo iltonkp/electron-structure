@@ -18,6 +18,7 @@ class BetController extends AbstractController {
         this._cancelBet();
         this._oneMoreBet();
         this._doCheckout();
+        this._payNow();
     }
 
     _ageConfimation() {
@@ -66,9 +67,21 @@ class BetController extends AbstractController {
 
     _doCheckout() {
         this._addEvents("#do-checkout", "click", event => {
-            session = this._gameService._checkout;
             this._loadPage("pay-now");
         });
+    }
+
+    _payNow() {
+        this._addEvents("#pay-now-yes", "click", event => {
+            this._loadPage("checkout");
+            this._gameService.loadTableGame();
+        })
+    }
+
+    _endCheckout() {
+        this._addEvents("#end-checkout", "click", event => {
+            this.loadPageGame("insert-card");
+        })
     }
 }
 

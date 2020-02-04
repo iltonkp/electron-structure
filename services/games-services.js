@@ -58,7 +58,13 @@ module.exports = class GameService {
                 }
 
             });
-        })
+        });
+
+        let logo = document.getElementById("game-logo");
+        logo.classList.add(this._selectedGame.name.toLowerCase().replace("-",""));
+
+        let gameName = document.getElementById("game-name");
+        gameName.innerHTML = this._selectedGame.name;
     }
 
     _addNumberToList(number) {
@@ -77,13 +83,39 @@ module.exports = class GameService {
             console.log(`Você precisa selecionar menos de ${this._selectedGame.maxNumbers} números`);
         }
 
+        let formatedNumbers = "";
+        let currentNumberSize = 0;
+
+        this._selectedNumbers.forEach(number => {
+            formatedNumbers += number;
+            currentNumberSize++;
+            if(currentNumberSize < this._selectedNumbers.length) {
+                formatedNumbers += " - ";
+            }
+        });
+
         this._checkout.push({
-            gameId: this._selectedGame.id,
-            numbers: this._selectedNumbers
+            game: this._selectedGame,
+            numbers: this._selectedNumbers,
+            formatedNumbers
         });
 
         //if everything it's ok
         return true;
+    }
+
+    loadTableGame() {
+        let table = document.getElementById("table-games");
+
+        let html = "";
+        this._checkout.forEach(checkout => {
+            html += `<tr>
+                        <td>Jogo ${checkout.game.name}: <strong>${checkout.formatedNumbers}</strong></td>
+                        <td>R$ 2,50</td>
+                    </tr>`
+        });
+
+        table.innerHTML = html;
     }
 
 }
