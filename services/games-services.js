@@ -78,9 +78,11 @@ module.exports = class GameService {
 
     confirmGame() {
         if(this._selectedNumbers.length < this._selectedGame.minNumbers) {
-            console.log(`Você precisa selecionar no mínimo ${this._selectedGame.minNumbers} números`);
+            alert(`Você precisa selecionar no mínimo ${this._selectedGame.minNumbers} números`);
+            return;
         } else if(this._selectedNumbers.length > this._selectedGame.maxNumbers) {
-            console.log(`Você precisa selecionar menos de ${this._selectedGame.maxNumbers} números`);
+            alert(`Você precisa selecionar menos de ${this._selectedGame.maxNumbers} números`);
+            return;
         }
 
         let formatedNumbers = "";
@@ -116,6 +118,18 @@ module.exports = class GameService {
         });
 
         table.innerHTML = html;
+    }
+
+    async doCheckout() {
+        let objectDTO = [];
+        this._checkout.forEach(c => {
+            let object = {numbers: c.formatedNumbers, gameId: c.game.id}
+            objectDTO.push(object);
+        });
+
+        let res = await axios.post('contest/to-bet', objectDTO);
+
+        console.log(res);
     }
 
 }

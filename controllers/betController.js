@@ -86,10 +86,21 @@ class BetController extends AbstractController {
             
             timeout.set(3000)
                 .then(() => {
-                    this._loadPage("password"); 
+                    this._loadPage("password");
+                    document.getElementById("insert-password-input").focus();
+                    this._addEvents("#insert-password-input", "keyup", event => {
+                        if(event.key == "Enter") {
+                            this.doCheckout(event);
+                        }
+                    });
                 });
 
         })
+    }
+
+    doCheckout(e) {
+        e.preventDefault();
+        this._gameService.doCheckout();
     }
 }
 
