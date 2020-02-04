@@ -90,7 +90,11 @@ class BetController extends AbstractController {
                     document.getElementById("insert-password-input").focus();
                     this._addEvents("#insert-password-input", "keyup", event => {
                         if(event.key == "Enter") {
-                            this.doCheckout(event);
+                            this._loadPage("remove-card");
+                            timeout.set(4000)
+                                .then(() => {
+                                    this.doCheckout(event);
+                                });
                         }
                     });
                 });
@@ -101,6 +105,11 @@ class BetController extends AbstractController {
     doCheckout(e) {
         e.preventDefault();
         this._gameService.doCheckout();
+        this._loadPage("bet-sucess");
+        timeout.set(4000)
+            .then(() => {
+                this._loadPage("home");
+            });
     }
 }
 
