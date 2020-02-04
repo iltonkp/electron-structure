@@ -1,5 +1,6 @@
 const AbstractController = require("./abstractController.js");
 const GameService = require("../services/games-services");
+const timeout = require('await-timeout');
 
 class BetController extends AbstractController {
 
@@ -10,7 +11,7 @@ class BetController extends AbstractController {
         this._loadEvents();
     }
 
-    _loadEvents() {
+    async _loadEvents() {
         this._ageConfimation();
         this._newGame();
         this._openGame();
@@ -19,6 +20,7 @@ class BetController extends AbstractController {
         this._oneMoreBet();
         this._doCheckout();
         this._payNow();
+        this._endCheckout();
     }
 
     _ageConfimation() {
@@ -80,7 +82,13 @@ class BetController extends AbstractController {
 
     _endCheckout() {
         this._addEvents("#end-checkout", "click", event => {
-            this.loadPageGame("insert-card");
+            this._loadPage("insert-card");
+            
+            timeout.set(3000)
+                .then(() => {
+                    this._loadPage("password"); 
+                });
+
         })
     }
 }
