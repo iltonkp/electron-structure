@@ -37,4 +37,8 @@ module.exports = class AbstractController {
             });
         });
     }
+
+    exit() {
+        alert("Saiu");
+    }
 }

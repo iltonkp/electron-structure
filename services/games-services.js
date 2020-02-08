@@ -120,10 +120,10 @@ module.exports = class GameService {
         table.innerHTML = html;
     }
 
-    async doCheckout() {
+    async doCheckout(finalize = true) {
         let objectDTO = [];
         this._checkout.forEach(c => {
-            let object = {numbers: c.formatedNumbers, gameId: c.game.id}
+            let object = {numbers: c.formatedNumbers, gameId: c.game.id, finalize}
             objectDTO.push(object);
         });
 

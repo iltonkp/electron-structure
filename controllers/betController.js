@@ -21,6 +21,11 @@ class BetController extends AbstractController {
         this._doCheckout();
         this._payNow();
         this._endCheckout();
+        this._payNowNo();
+        this._recordFileNo();
+        this._recordFileYes();
+        this._goToCart();
+        this._confirmEndCheckout();
     }
 
     _ageConfimation() {
@@ -75,13 +80,25 @@ class BetController extends AbstractController {
 
     _payNow() {
         this._addEvents("#pay-now-yes", "click", event => {
-            this._loadPage("checkout");
-            this._gameService.loadTableGame();
+            this.loadCart();
         })
+    }
+
+    loadCart() {
+        this._loadPage("checkout");
+        this._gameService.loadTableGame();
     }
 
     _endCheckout() {
         this._addEvents("#end-checkout", "click", event => {
+            this._loadPage("confirm-checkout");
+            this._confirmEndCheckout();
+
+        })
+    }
+
+    _confirmEndCheckout() {
+        this._addEvents("#confirm-end-checkout", "click", event => {
             this._loadPage("insert-card");
             
             timeout.set(3000)
@@ -98,18 +115,63 @@ class BetController extends AbstractController {
                         }
                     });
                 });
+        });
 
+        this._addEvents("#noconfirm-end-checkout", "click", event => {
+            this.loadCart();
         })
     }
 
     doCheckout(e) {
         e.preventDefault();
         this._gameService.doCheckout();
-        this._loadPage("bet-sucess");
-        timeout.set(4000)
-            .then(() => {
-                this._loadPage("home");
-            });
+        this._loadPage("receipt-will-be-print");
+
+        this._addEvents("#go-to-home", "click", event => {
+            location.reload();
+        });
+
+        this._addEvents("#go-to-balance", "click", event => {
+            alert("No implemented yet!");
+        });
+
+        this._addEvents("#exit-bet", "click", event => {
+            this._loadPage("bet-sucess");
+
+            timeout.set(4000)
+                .then(() => {
+                    location.reload();
+                });
+        });
+    }
+
+    _payNowNo() {
+        this._addEvents("#pay-now-no", "click", event => {
+            this._loadPage("record-file");
+        });   
+    }
+
+    _recordFileNo() {
+        this._addEvents("#record-file-no", "click", event => {
+            this.exit();
+        })
+    }
+
+    _recordFileYes() {
+        this._addEvents("#record-file-yes", "click", event => {
+            this._gameService.doCheckout(false);
+            this._loadPage("remove-bill");
+            timeout.set(4000)
+                .then(() => {
+                    this._loadPage("finalizate");
+                })
+        });
+    }
+
+    _goToCart() {
+        this._addEvents("#go-to-cart", "click", event => {
+            this.loadCart();
+        })
     }
 }
 
