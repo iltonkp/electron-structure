@@ -22,7 +22,6 @@ class BetController extends AbstractController {
         this._payNow();
         this._endCheckout();
         this._payNowNo();
-        this._recordFileNo();
         this._recordFileYes();
         this._goToCart();
         this._confirmEndCheckout();
@@ -30,13 +29,11 @@ class BetController extends AbstractController {
 
     _ageConfimation() {
         this._addEvents("#show-rules", "click", event => {
-            document.getElementById("background-modal").classList.add("is-active");
-            document.getElementById("modal-rules").classList.add("is-active");
+            this.loadModal();
 
             this._addEvents("#rules-agree", "click", event => {
                 this._loadPage("game-home");
-                document.getElementById("background-modal").classList.remove("is-active");
-                document.getElementById("modal-rules").classList.remove("is-active");
+                this.closeModal();
             });
 
             this._addEvents("#rules-disagree", "click", event => {
@@ -61,6 +58,13 @@ class BetController extends AbstractController {
         this._addEvents(".btn-game", "click", event => {
             this._loadPage(event.target.dataset.section);
             this._gameService.startGame(event.currentTarget.attributes['gameselected'].value);
+            document.getElementById("background-modal").classList.add("is-active");
+            document.getElementById("game-generic-modal").classList.add("is-active");
+
+            this._addEvents("#game-modal-rules-agree", "click", event => {
+                document.getElementById("background-modal").classList.remove("is-active");
+                document.getElementById("game-generic-modal").classList.remove("is-active");
+            })
         });
     }
 
@@ -162,12 +166,6 @@ class BetController extends AbstractController {
         this._addEvents("#pay-now-no", "click", event => {
             this._loadPage("record-file");
         });   
-    }
-
-    _recordFileNo() {
-        this._addEvents("#record-file-no", "click", event => {
-            this.exit();
-        })
     }
 
     _recordFileYes() {

@@ -9,6 +9,7 @@ class ManagerController {
         //will be a hashmap
         this._controllers = {};
         this._load();
+        this._goBackEvent();
     }
 
     static getSession() {
@@ -33,6 +34,29 @@ class ManagerController {
             button.addEventListener("click", event => {
              this._loadController(event);
             });
+        });
+    }
+
+    _goBackEvent() {
+        let goBackButtons = document.querySelectorAll(".btn-back");
+        goBackButtons.forEach(button => {
+            button.addEventListener("click", event => {
+                location.reload();
+            })
+        })
+
+        let logout = document.querySelectorAll(".logout");
+        logout.forEach(button => {
+            button.addEventListener("click", event => {
+                location.reload();
+            })
+        });
+
+        let exitButtons = document.querySelectorAll(".exit");
+        exitButtons.forEach(button => {
+            button.addEventListener("click", event => {
+                location.reload();
+            })
         });
     }
 
