@@ -29,10 +29,23 @@ class BetController extends AbstractController {
     }
 
     _ageConfimation() {
-        this._addEvents(".age-confirmation", "click", event => {
-            if(event.target) {
-                this._loadPage(event.target.dataset.section);
-            }
+        this._addEvents("#show-rules", "click", event => {
+            document.getElementById("background-modal").classList.add("is-active");
+            document.getElementById("modal-rules").classList.add("is-active");
+
+            this._addEvents("#rules-agree", "click", event => {
+                this._loadPage("game-home");
+                document.getElementById("background-modal").classList.remove("is-active");
+                document.getElementById("modal-rules").classList.remove("is-active");
+            });
+
+            this._addEvents("#rules-disagree", "click", event => {
+                location.reload();
+            });
+        });
+
+        this._addEvents("#go-back", "click", event => {
+            location.reload();
         });
     }
 

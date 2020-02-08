@@ -1,19 +1,62 @@
 <template class="task-template">
-  <!-- birth confirmation -->
-  <section id="confirmation-game-question-section" class="template"> 
+  <section class="end-checkout template" id="age-confirmation-section">
+    <input type="hidden" value="age-confirmation" id="bodyClass" />
+    
     <button class="btn-back">Voltar</button>
     <article class="highlight">
       <h2>Você tem mais de 18 anos?</h2>
       <ul>
         <li>
-          <button class="btn-success" type="button" data-section="game-home">Sim</button>
+          <button class="btn-success" type="button" id="show-rules">Sim</button>
         </li>
         <li>
-          <button class="btn-danger" type="button" data-section="home">Não</button>
+          <button class="btn-danger" type="button" id="go-back">Não</button>
         </li>
       </ul>
       <p>Proibida a venda de bilhetes lotéricos para menores de idade, conforme Lei n. 8069/90, art. 81, inciso VI do Estatuto da Criança e do Adolescente.</p>
     </article>
     <h3> Crime de falsidade ideológica é figura tipificada<br />no artigo 299 do Código Penal Brasileiro</h3>
   </section>
+
+<!-- The Modal -->
+<div class="modal" id="modal-rules">
+  <div class="modal-content">
+    <header>
+      <h3>Atenção</h3>
+    </header>
+    <section>
+		<h4>Falsidade ideológica é crime!</h4>
+        <p>Art. 299. Omitir, em documento público ou particular, declaração que dele devia constar, ou nele inserir ou fazer inserir declaração falsa ou diversa da que devia ser escrita, com o fim de prejudicar direito, criar obrigação ou alterar a verdade sobre fato juridicamente relevante:</p>
+        <p>Pena: reclusão, de um a cinco anos, e multa, se o documento é público, e reclusão de um a três anos, e multa, se o documento é particular.</p>
+        <p>Parágrafo único. Se o agente é funcionário público, e comete o crime prevalecendo-se do cargo, ou se a falsificação ou alteração é de assentamento de registro civil, aumenta-se a pena de sexta parte.</p>
+        <h4>1. Ação penal</h4>
+        <p>Pública Incondicionada.</p>
+        <h4>2. Classificação doutrinária</h4>
+        <p>Crime comum; formal; doloso; não transeunte; de forma livre; instantâneo de efeitos permanentes; comissivo e omissivo próprio; unissubjetivo; plurissubsistente.</p>
+        <h4>3. Sujeitos do Crime</h4>
+        <p>a) Sujeito ativo: qualquer pessoa. O art. 299 do Código Penal não prevê nenhuma qualidade ou condição especial do agente.</p>
+        <p>b)Sujeito passivo: o Estado, bem como a pessoa prejudicada pelo ilícito penal.</p>
+        <h4>4. Bem juridicamente tutelado</h4>
+        <p>Busca-se evitar, com a tipificação deste delito, a falsificação de selo ou sinal público, protegendo, assim, a fé pública.</p>
+        <p>O objeto material é o documento particular falsificado, no todo ou em parte, ou o documento particular verdadeiro que foi alterado pelo sujeito.</p>
+        <h4>5. Consumação e tentativa</h4>
+        <p>Consuma-se o crime quando nele se reúnem todos os elementos previstos na sua definição legal. Portanto, de acordo com o caput do artigo em apreço, a consumação se dá na omissão de declaração em documento público ou particular que devia constar, ou nele inserir ou fazer inserir, com o intuito de prejudicar direito, bem como criar obrigação ou alterar a verdade sobre fato juridicamente relevante.</p>
+        <p>Por se tratar de um crime em regra plurissubsistente, admiti-se a forma tentada.</p>
+        <h4>6. Elemento subjetivo</h4>
+        <p>O elemento subjetivo no crime em estudo é o dolo. Não há previsão para a modalidade culposa.</p>
+        <h4>7. Modalidades comissiva e omissiva</h4>
+        <p>As ações inserir e/ou fazer inserir, constantes do caput do artigo art. 299 do CP implicam em um comportamento comissivo por parte do agente.</p>
+        <p>Já o núcleo do tipo omitir, implica em uma conduta negativa por parte do agente, retratando neste caso, um crime omissivo próprio.</p>
+        <h4>8. Pena</h4>
+        <p>A pena cominada ao crime de falsidade ideológica é de reclusão, de 1(um) a 5 (cinco) anos, e multa, se o documento é público e de reclusão de 1(um) a 3(três) anos, e multa se o documento é particular.</p>
+        <h4>9. Forma Majorada</h4>
+        <p>Está previsto no § único do art. 299 do Código Penal que se o agente for funcionário público e comete o crime prevalecendo-se do cargo, ou se a falsificação ou a alteração é de assentamento de registro civil, aumenta-se a pena de sexta parte.</p>
+        <p>O simples fato de o agente ser funcionário público não será suficiente para que tenha sua pena aumentada. O aumento só se dará caso o funcionário público cometa o crime prevalecendo-se do cargo que ocupa.</p>
+    </section>
+    <footer>
+      <button class="btn-success home-button" id="rules-agree">Li e concordo</button>
+      <button class="btn-danger" id="rules-disagree">Cancelar</button>
+    </footer>
+  </div>
+</div>	
 </template>
